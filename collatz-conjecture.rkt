@@ -27,4 +27,4 @@
     ) ; close off the conditions
   ); close off the function
 
-(collatz-list 9) ; passes 5 into the function
+(collatz-list 9) ; passes 9 into the function

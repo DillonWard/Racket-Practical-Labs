@@ -1,6 +1,7 @@
 ; Author: Dillon Ward (Dillonward2017@gmail.com)
 ; a function that takes in a positive integer as an input and returns a list
 ; by recursively applying collatz conjecture to the list
+; (1) Adapted from: https://docs.racket-lang.org/guide/Pairs__Lists__and_Racket_Syntax.html
 ; 31/1/2018
 #lang racket
 
@@ -15,12 +16,12 @@
   (cond
     ((= n 1) list '(1)) ; passes in 2 conditions - checks if the number being passed in is 
     ((even? n) ; checks if the parameter being passed in is even
-     (cons n ; cons takes in 2 paremeters (n the number being passed in, and the forumula)
+     (cons n ; (1) cons takes in 2 paremeters (n the number being passed in, and the forumula)
            (collatz-list (/ n 2)))
      ) ; if it's even use this formula
     
     (odd? ; checks if the parameter being passed in is odd
-     (cons n ; cons takes in 2 paremeters (n the number being passed in, and the forumula)
+     (cons n ; (1) cons takes in 2 paremeters (n the number being passed in, and the forumula)
            (collatz-list (+ (* 3 n) 1)))
      ); if the parameter is odd use this formula
     ) ; close off the conditions

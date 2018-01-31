@@ -5,10 +5,10 @@
 ; 19/01/2018
 #lang racket
 
-; define the function (prime? p) where 'prime?' is the name of the function
+; define the function (decide-prime p) where 'decide-prime' is the name of the function
 ; and 'p' is the number that is passed into the function
-; the prime? function will return true or false
-(define (prime? p)
+; the decide-prime function will return true or false
+(define (decide-prime p)
   ; defines a function 'non-divisible-by'
   (define (non-divisible-by n d)
     ; if d is equal to 1 return true ((= d 1) == (d = 1))
@@ -18,12 +18,12 @@
      (else (if(= (remainder n d) 0)
           #false
           (non-divisible-by n (- d 1))))))
-  
+  ; if p is equal to 1 pass '- p 1' ((- p 1) == (p - 1)) into the non-divisible-by function 
   (if (= p 1)
       #true
       (non-divisible-by p (- p 1))))
 
 ; iterate through a list from 0 - 10 (2)
-; pass i into the prime? function
+; pass i into the decide-prime function - ((0 - 10) ==(#f #t #t #t #f #t #f #t #f #f))
 (for/list ([i 10])
-    (prime? i))
+    (decide-prime i))

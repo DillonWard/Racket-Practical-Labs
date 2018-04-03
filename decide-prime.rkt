@@ -3,6 +3,7 @@
 ; Adapted from - https://stackoverflow.com/questions/3345626/finding-a-prime-number-in-scheme-using-natural-recursion
 ; Adapted from - https://docs.racket-lang.org/guide/for.html
 ; 19/01/2018
+
 #lang racket
 (define (decide-prime p)
   ; defines a function 'non-divisible-by'
@@ -40,7 +41,8 @@
 ;;;       #true
 ;;;       (non-divisible-by p (- p 1))))
 
-; iterate through a list from 0 - 10 (2)
+
+; iterate through a list from 1 - 10 (2)
 ; pass i into the decide-prime function - ((1 - 10) ==(#f #t #t #f #t #f #t #f #f #f))
 
 (for/list ([i '(1 2 3 4 5 6 7 8 9 10)])

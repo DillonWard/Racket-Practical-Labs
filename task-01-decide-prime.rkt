@@ -20,9 +20,6 @@
       #false
       (non-divisible-by p (- p 1))))
 
-
-
-
 ; this is how I was previously doing it by getting the remainder
 
 ;;; ; define the function (decide-prime p) where 'decide-prime' is the name of the function

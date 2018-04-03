@@ -24,13 +24,14 @@
 (left-cycle (list 1 2 3 4))
 (right-cycle (list 1 2 3 4))
 
-; was previously trying to see if I could remove the last index and cycle it right inside the same function
-;(define (rcycle m)
-;      (append (cons (last m)
-;              (remove-last-index m)))
-;(define (remove-last-index e)
-;    (if (null? (cdr e))
-;        (cons (car e) (remove-last-index (cdr e))))))
+
+;;;  was previously trying to see if I could remove the last index and cycle it right inside the same function
+;;; (define (rcycle m)
+;;;       (append (cons (last m)
+;;;               (remove-last-index m)))
+;;; (define (remove-last-index e)
+;;;     (if (null? (cdr e))
+;;;         (cons (car e) (remove-last-index (cdr e))))))
 
 
 

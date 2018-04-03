@@ -26,9 +26,8 @@
 
 (collatz-list 9)
 
-(collatz-list 2)
 
-  ;;; (define list '())
+;;; (define list '())
 ;;; ; defines the function 'collatz-list'
 ;;; (define (collatz-list n)
 

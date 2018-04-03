@@ -23,6 +23,8 @@
 
 
 
+; this is how I was previously doing it by getting the remainder
+
 ;;; ; define the function (decide-prime p) where 'decide-prime' is the name of the function
 ;;; ; and 'p' is the number that is passed into the function
 ;;; ; the decide-prime function will return true or false

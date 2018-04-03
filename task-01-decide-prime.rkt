@@ -16,7 +16,8 @@
           #false
           (non-divisible-by n (- d 1))))))
   ; if p is equal to 1 pass '- p 1' ((- p 1) == (p - 1)) into the non-divisible-by function 
-  (if (= p 1)
+  (if 
+  (= p 1)
       #false
       (non-divisible-by p (- p 1))))
 

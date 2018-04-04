@@ -21,6 +21,23 @@ Open and run the solutions using DrRacket
 ```
 
 ## Running the Solutions
+After you've installed DrRacket ([see above](https://github.com/DillonWard/Racket-Practical-Labs#prerequisites)) open the application.
+
+![alt text](https://github.com/DillonWard/Racket-Practical-Labs/blob/master/images/Screenshot_1.png?raw=true)
+
+Once the application is open, in the tool bar select the `File` option and choose `Open` so that you can select a solution.
+
+ ![alt text](https://github.com/DillonWard/Racket-Practical-Labs/blob/master/images/Screenshot_2.png?raw=true)
+
+ Once you select `Open`, open the directory where you [cloned](https://github.com/DillonWard/Racket-Practical-Labs#cloning-this-repository) the solutions and select a `.rkt` file to run. These files should have a small Racket logo to help identify them.
+
+![alt text](https://github.com/DillonWard/Racket-Practical-Labs/blob/master/images/Screenshot_3.png?raw=true)
+
+Finally, after you've opened your solution, select the `RUN` option in the toolbar. This will run the solution and give the expected output.
+
+![alt text](https://github.com/DillonWard/Racket-Practical-Labs/blob/master/images/Screenshot_4.png?raw=true)
+
+
 # Functional Programming
 ## What is Functional Programming?
 [Functional programming](https://en.wikipedia.org/wiki/Functional_programming) is the process of building software by composing pure functions, avoiding shared state, mutable data, and side-effects. Functional programming is declarative rather than imperative, and application state flows through pure functions. Contrast with object oriented programming, where application state is usually shared and colocated with methods in objects.

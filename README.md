@@ -65,6 +65,7 @@ CA 2018 Theory of Algorithms The following exercises should be completed in the 
 ## Problem 1 - Decide Prime
 Write, from scratch, a function in Racket that uses a brute-force algorithm that takes a single positive integer and return true if the number is a prime and false otherwise.
 Call the function `decide-prime`.
+
 #### [See Solution](https://raw.githubusercontent.com/DillonWard/Racket-Practical-Labs/master/task-01-decide-prime.rkt)
 
 ## Problem 2 - Collatz List
@@ -72,6 +73,12 @@ Write, from scratch, a function in Racket that takes a positive integer n0 as in
 End the recursion when (or if) the number becomes 1. Call the function `collatz-list`.
 So, `collatz-list` should return a list whose first element is n0, the second element
 is n1, and so on.
+
+![alt text](https://github.com/DillonWard/Racket-Practical-Labs/blob/master/images/collatz-list.png?raw=true)
+```
+> (collatz-list 5)
+'(5 16 8 4 2 1)
+```
 #### [See Solution](https://raw.githubusercontent.com/DillonWard/Racket-Practical-Labs/master/task-02-collatz-conjecture.rkt)
 
 ## Problem 3 - Left-Right Cycke
@@ -79,42 +86,89 @@ Write, from scratch, two functions in Racket. The first is called `lcycle`. It t
 list as input and returns the list cyclically shifted one place to the left. The second
 is called `rcycle`, and it shifts the list cyclically shifted one place to the right.
 
+```
+> (lcycle (list 1 2 3 4 5))
+'(2 3 4 5 1)
+> (rcycle (list 1 2 3 4 5))
+'(5 1 2 3 4)
+```
+#### [See Solution](https://raw.githubusercontent.com/DillonWard/Racket-Practical-Labs/master/task-03-left-right-cycle.rkt)
+
 ## Problem 4 - Sublsum
 Write a function `sublsum` in Racket that takes a list (of integers) as input and returns
 a list of sublists of it that sum to zero. For this problem, you can use the
 `combinations` built-in function. Note the order of the sublists and their elements
 doesn’t matter.
 
+#### [See Solution](https://raw.githubusercontent.com/DillonWard/Racket-Practical-Labs/master/task-04-sublist-sum.rkt)
+
 ## Problem 5 - Hamming Weight
 Write a function `hamming-weight` in Racket that takes a list l as input and returns
 the number of non-zero elements in it.
 
+```
+> (hamming-weight (list 1 0 1 0 1 1 1 0))
+5
+```
+#### [See Solution](https://raw.githubusercontent.com/DillonWard/Racket-Practical-Labs/master/task-05-hamming-weight.rkt)
+
 ## Problem 6 - Hamming Distance
 Write a function `hamming-distance` in Racket that takes two lists and returns the
 number of positions in which they differ.
+
+```
+> (hamming-distance (list 1 0 1 0 1 1 1 0) (list 1 1 1 1 0 0 0 0))
+5
+```
+#### [See Solution](https://raw.githubusercontent.com/DillonWard/Racket-Practical-Labs/master/task-06-hamming-distance.rkt)
 
 ## Problem 7 - Maj
 Write a function `maj` in Racket that takes three lists x, y and z of equal length and
 containing only 0’s and 1’s. It should return a list containing a 1 where two or more
 of x, y and z contain 1’s, and 0 otherwise.
 
+```
+> (maj (list 0 0 0 0 1 1 1 1) (list 0 0 1 1 0 0 1 1) (list 0 1 0 1 0 1 0 1))
+'(0 0 0 1 0 1 1 1)
+```
+#### [See Solution](https://raw.githubusercontent.com/DillonWard/Racket-Practical-Labs/master/task-07-maj.rkt)
+
 ## Problem 8 - Chse
 Write a function `chse` in Racket that takes three lists x, y and z of equal length and
 containing only 0’s and 1’s. It should return a list containing the elements of y in
 the positions where x is 1 and the elements of z otherwise.
+
+```
+> (chse (list 0 0 0 0 1 1 1 1) (list 0 0 1 1 0 0 1 1) (list 0 1 0 1 0 1 0 1))
+'(0 1 0 1 0 0 1 1)
+```
+#### [See Solution](https://raw.githubusercontent.com/DillonWard/Racket-Practical-Labs/master/task-08-chse.rkt)
 
 ## Problem 9 - Sod2
 Write a function `sod2` in Racket that takes three lists x, y and z of equal length and
 containing only 0’s and 1’s. It should return a list containing a 1 where the number of
 1’s in a given position in x, y and z contains an odd nubmer of 1’s, and 0 otherwise.
 
+```
+> (sod2 (list 0 0 0 0 1 1 1 1) (list 0 0 1 1 0 0 1 1) (list 0 1 0 1 0 1 0 1))
+'(0 1 1 0 1 0 0 1)
+```
+#### [See Solution](https://raw.githubusercontent.com/DillonWard/Racket-Practical-Labs/master/task-09-sod2.rkt)
+
 ## Problem 10 - Lstq
 Write a function lstq in Racket that takes as arguments two lists l and m of equal
 length and containing numbers. It should return d, the distance given by the sum of
 the square residuals between the numbers in the lists:
 
+![alt text](https://github.com/DillonWard/Racket-Practical-Labs/blob/master/images/lstq.png?raw=true)
 
 This means take the *i* element of m from the *i* element of l and square the result for all *i*. Then add all of those to get d.
+
+```
+> (lstq (list 4.5 5.1 6.2 7.8) (list 1.1 -0.1 6.1 3.8))
+54.61
+```
+#### [See Solution](https://raw.githubusercontent.com/DillonWard/Racket-Practical-Labs/master/task-10-lstq.rkt)
 
 ## References
 * [Racket](https://racket-lang.org/)
